@@ -30,7 +30,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     const data = new FormData(form);
     const button = form.querySelector('.submit-btn');
     
-    button.textContent = 'Sending...';
+    button.textContent = 'Dispatching Brief...';
     button.disabled = true;
 
     try {
@@ -41,7 +41,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
         });
 
         if (response.ok) {
-            alert("Thank you! Your message has been sent successfully. Jedidiah Web Studio will be in touch soon.");
+            alert("Success! Your project brief has been logged. Jedidiah Web Studio will review your requirements and reach out shortly.");
             form.reset();
         } else {
             alert("Oops! There was a problem submitting your form. Please try again.");
@@ -49,7 +49,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     } catch (error) {
         alert("Oops! Connection error occurred. Please try again.");
     } finally {
-        button.textContent = 'Send Message';
+        button.textContent = 'Dispatch Project Details';
         button.disabled = false;
     }
 });
