@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jedidiah Web Studio | Premium Web Design & Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <a href="https://wa.me/233592120421?text=Hello%20Jedidiah%20Web%20Studio!%20I'm%20interested%20in%20building%20a%20website%20project." 
+       target="_blank" 
+       class="whatsapp-float" 
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us</span>
+    </a>
+
+    <div id="progress-wrap" class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+        </svg>
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <header>
+        <div class="logo">Jedidiah<span>WebStudio</span></div>
+        <div class="header-controls">
+            <div id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav-overlay" id="nav-overlay">
+        <ul class="overlay-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Get Started</a></li>
+        </ul>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>We Craft High-Converting <br><span>Digital Experiences</span></h1>
+            <p>Modern, fast, and bespoke websites tailored to grow your business.</p>
+            <a href="#contact" class="cta-btn">Let's Build Together</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid reveal">
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>Clean, semantic, and lightning-fast custom coding tailored to your project.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>UI/UX Design</h3>
+                <p>Beautiful, intuitive user interfaces that convert visitors into customers.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-search-dollar"></i>
+                <h3>SEO Optimization</h3>
+                <p>Structuring your site to rank high on search engines right out of the box.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Selected Work</h2>
+        <div class="portfolio-grid reveal">
+            <div class="portfolio-item id-card">
+                <div class="portfolio-content-inner">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Custom Shopify Build</p>
+                </div>
+            </div>
+            <div class="portfolio-item id-card">
+                <div class="portfolio-content-inner">
+                    <h3>SaaS Dashboard</h3>
+                    <p>React & Tailwind UI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="slider-container reveal">
+            <div class="testimonial-slider" id="testimonial-slider">
+                
+                <div class="testimonial-slide active">
+                    <p class="quote">"Jedidiah Web Studio completely transformed our online presence. The 3D interactions and flawless performance on mobile doubled our checkout conversion rate within a month!"</p>
+                    <h4>Sarah Jenkins</h4>
+                    <span>CEO, Nexus Logistics</span>
+                </div>
+
+                <div class="testimonial-slide">
+                    <p class="quote">"Working with this studio was seamless. They delivered a fast dashboard design ahead of schedule, completely tailoring it to our SaaS product requirements."</p>
+                    <h4>David Chen</h4>
+                    <span>Product Lead, FinTech IQ</span>
+                </div>
+
+                <div class="testimonial-slide">
+                    <p class="quote">"The premium visual design and integrated automated scheduling system save me hours every single week. My clients constantly compliment our high-end interface."</p>
+                    <h4>Marcus Vance</h4>
+                    <span>Founder, Vance Agency</span>
+                </div>
+
+            </div>
+            
+            <div class="slider-controls">
+                <button class="control-btn" id="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots" id="slider-dots"></div>
+                <button class="control-btn" id="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container reveal">
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How long does it take to build a custom studio project?</h3>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>On average, a bespoke website takes between 2 to 4 weeks depending on the complexity, design depth, and dynamic feature configurations requested.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Will my website render perfectly across smartphones and tablets?</h3>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. Every line of our utility code is compiled mobile-first, ensuring that fluid scales, grid systems, and premium 3D interactions perform cleanly on devices of all shapes and sizes.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How are unique call links generated automatically?</h3>
+                    <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our integrated live appointment calendar matrix instantly syncs directly with secure schedulers like Calendly or Cal.com. The moment you book a time slots, safe, randomized Google Meet or Zoom vectors are generated and locked into both email accounts.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Let's Connect</h2>
+        <p>Choose whether to pick a time directly on our calendar or drop a quick message.</p>
+        
+        <div class="booking-container reveal">
+            <h3><i class="far fa-calendar-alt"></i> Instant Meeting Scheduler</h3>
+            <p>Book a discovery session. A unique, secure video meeting link will be generated automatically upon booking.</p>
+            <a href="https://calendly.com/YOUR-USERNAME" target="_blank" class="book-btn">
+                <i class="fas fa-video"></i> Schedule Video Call
+            </a>
+        </div>
+
+        <div class="divider-text reveal"><span>OR</span></div>
+
+        <form id="contact-form" class="reveal" action="https://formspree.io/f/mrevddjl" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" rows="5" placeholder="Project Details" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <div class="social-container reveal">
+            <h3>Follow the Studio</h3>
+            <div class="social-icons">
+                <a href="https://twitter.com/yourhandle" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://linkedin.com/in/yourhandle" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/yourhandle" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/yourhandle" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Jedidiah Web Studio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
