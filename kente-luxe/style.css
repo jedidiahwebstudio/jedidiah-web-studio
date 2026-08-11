@@ -1,0 +1,275 @@
+/* ==========================================
+   KENTE LUXE - STYLING ENGINE
+   ========================================== */
+:root {
+    --bg-main: #0c0a09;
+    --card-bg: #1c1917;
+    --gold: #d97706;
+    --gold-bright: #f59e0b;
+    --text-white: #fafaf9;
+    --text-muted: #a8a29e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', Georgia, serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+/* Header Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(12, 10, 9, 0.9);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.logo span { color: var(--gold); }
+
+.nav-links { display: flex; gap: 30px; }
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-family: -apple-system, sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--gold); }
+
+.nav-btn {
+    background: #25d366;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: -apple-system, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: transform 0.3s;
+}
+.nav-btn:hover { transform: translateY(-2px); }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #1c1917 0%, #0c0a09 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 8%;
+    position: relative;
+}
+
+.tagline {
+    color: var(--gold);
+    font-family: -apple-system, sans-serif;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin: 15px 0 20px;
+    line-height: 1.15;
+    max-width: 850px;
+}
+
+.hero-content p {
+    color: var(--text-muted);
+    font-family: -apple-system, sans-serif;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 35px;
+}
+
+.hero-btns { display: flex; gap: 15px; justify-content: center; }
+
+.btn {
+    padding: 14px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: -apple-system, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+.btn.primary { background: var(--gold); color: #fff; }
+.btn.primary:hover { background: var(--gold-bright); }
+.btn.secondary { border: 1px solid rgba(255,255,255,0.2); color: var(--text-white); }
+.btn.secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Collections Section */
+.collections, .about, .lookbook, .contact { padding: 100px 8%; }
+
+.section-title { text-align: center; margin-bottom: 50px; }
+.section-title h2 { font-size: 2.5rem; margin-bottom: 10px; }
+.section-title p { color: var(--text-muted); font-family: -apple-system, sans-serif; }
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.product-img-wrap { position: relative; height: 320px; }
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--gold);
+    color: #fff;
+    font-family: -apple-system, sans-serif;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.img-placeholder { width: 100%; height: 100%; }
+.luxury-kente-1 { background: linear-gradient(135deg, #78350f, #451a03); }
+.luxury-kente-2 { background: linear-gradient(135deg, #831843, #500724); }
+.luxury-kente-3 { background: linear-gradient(135deg, #14532d, #064e3b); }
+
+.product-info { padding: 25px; text-align: center; }
+.product-info h3 { font-size: 1.3rem; margin-bottom: 8px; }
+.price { color: var(--gold); font-family: -apple-system, sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 20px; }
+
+.order-btn {
+    display: block;
+    background: #25d366;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-family: -apple-system, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+.order-btn:hover { opacity: 0.9; }
+
+/* About Section */
+.about { background: #12100e; }
+.about-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.sub-heading { color: var(--gold); font-family: -apple-system, sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; }
+.about-text h2 { font-size: 2.3rem; margin: 10px 0 20px; line-height: 1.2; }
+.about-text p { color: var(--text-muted); font-family: -apple-system, sans-serif; margin-bottom: 25px; }
+
+.highlights { display: flex; flex-direction: column; gap: 12px; font-family: -apple-system, sans-serif; font-size: 0.95rem; }
+.highlights i { color: var(--gold); margin-right: 8px; }
+
+.graphic-box {
+    background: linear-gradient(135deg, #b45309, #78350f);
+    padding: 80px;
+    border-radius: 12px;
+    text-align: center;
+}
+.graphic-box h3 { font-size: 4rem; }
+.graphic-box p { font-family: -apple-system, sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+
+/* Lookbook Grid */
+.lookbook-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.gallery-placeholder {
+    height: 250px;
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+.g-1 { background: linear-gradient(135deg, #292524, #1c1917); }
+.g-2 { background: linear-gradient(135deg, #44403c, #292524); }
+.g-3 { background: linear-gradient(135deg, #1c1917, #0c0a09); }
+.g-4 { background: linear-gradient(135deg, #3b0764, #1e1b4b); }
+
+/* Contact Section */
+.contact-card {
+    background: var(--card-bg);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 60px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.contact-card h2 { font-size: 2.2rem; margin-bottom: 10px; }
+.contact-card p { color: var(--text-muted); font-family: -apple-system, sans-serif; margin-bottom: 30px; }
+
+.contact-details { font-family: -apple-system, sans-serif; margin-bottom: 30px; display: flex; flex-direction: column; gap: 12px; }
+.contact-details i { color: var(--gold); margin-right: 10px; }
+
+.contact-whatsapp {
+    display: inline-block;
+    background: #25d366;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: -apple-system, sans-serif;
+    font-weight: 700;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-family: -apple-system, sans-serif;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-content h1 { font-size: 2.3rem; }
+    .about-container { grid-template-columns: 1fr; }
+    .lookbook-gallery { grid-template-columns: 1fr; }
+}
