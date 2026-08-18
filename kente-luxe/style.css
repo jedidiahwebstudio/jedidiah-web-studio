@@ -24,16 +24,30 @@ body {
     line-height: 1.6;
 }
 
+/* Studio Preview Bar */
+.studio-bar {
+    background: #000;
+    text-align: center;
+    padding: 6px;
+    font-size: 0.8rem;
+    font-family: -apple-system, sans-serif;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.studio-bar a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+}
+
 /* Header Navigation */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background: rgba(12, 10, 9, 0.9);
+    padding: 18px 8%;
+    background: rgba(12, 10, 9, 0.95);
     backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
+    position: sticky;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(217, 119, 6, 0.2);
@@ -51,7 +65,7 @@ header {
     color: var(--text-muted);
     text-decoration: none;
     font-family: -apple-system, sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s;
@@ -61,7 +75,7 @@ header {
 .nav-btn {
     background: #25d366;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 18px;
     border-radius: 4px;
     text-decoration: none;
     font-family: -apple-system, sans-serif;
@@ -73,13 +87,13 @@ header {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 85vh;
     background: linear-gradient(135deg, #1c1917 0%, #0c0a09 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 8%;
+    padding: 60px 8%;
     position: relative;
 }
 
@@ -92,7 +106,7 @@ header {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     margin: 15px 0 20px;
     line-height: 1.15;
     max-width: 850px;
@@ -106,14 +120,14 @@ header {
     margin: 0 auto 35px;
 }
 
-.hero-btns { display: flex; gap: 15px; justify-content: center; }
+.hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
 
 .btn {
-    padding: 14px 30px;
+    padding: 14px 28px;
     border-radius: 4px;
     text-decoration: none;
     font-family: -apple-system, sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -124,16 +138,17 @@ header {
 .btn.secondary { border: 1px solid rgba(255,255,255,0.2); color: var(--text-white); }
 .btn.secondary:hover { border-color: var(--gold); color: var(--gold); }
 
-/* Collections Section */
-.collections, .about, .lookbook, .contact { padding: 100px 8%; }
+/* Sections Styling */
+.collection-section, .about, .lookbook, .contact { padding: 90px 8%; }
 
 .section-title { text-align: center; margin-bottom: 50px; }
-.section-title h2 { font-size: 2.5rem; margin-bottom: 10px; }
+.section-title h2 { font-size: 2.3rem; margin-bottom: 10px; }
 .section-title p { color: var(--text-muted); font-family: -apple-system, sans-serif; }
 
+/* Product Cards Grid */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
 }
 
@@ -149,7 +164,19 @@ header {
     border-color: var(--gold);
 }
 
-.product-img-wrap { position: relative; height: 320px; }
+.product-img-wrap {
+    position: relative;
+    height: 340px;
+    background: #12100e;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .badge {
     position: absolute;
     top: 15px;
@@ -162,16 +189,12 @@ header {
     border-radius: 2px;
     text-transform: uppercase;
     font-weight: 700;
+    z-index: 2;
 }
 
-.img-placeholder { width: 100%; height: 100%; }
-.luxury-kente-1 { background: linear-gradient(135deg, #78350f, #451a03); }
-.luxury-kente-2 { background: linear-gradient(135deg, #831843, #500724); }
-.luxury-kente-3 { background: linear-gradient(135deg, #14532d, #064e3b); }
-
-.product-info { padding: 25px; text-align: center; }
-.product-info h3 { font-size: 1.3rem; margin-bottom: 8px; }
-.price { color: var(--gold); font-family: -apple-system, sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 20px; }
+.product-info { padding: 22px; text-align: center; }
+.product-info h3 { font-size: 1.25rem; margin-bottom: 8px; }
+.price { color: var(--gold); font-family: -apple-system, sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 18px; }
 
 .order-btn {
     display: block;
@@ -182,7 +205,7 @@ header {
     border-radius: 4px;
     font-family: -apple-system, sans-serif;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: opacity 0.3s;
 }
 .order-btn:hover { opacity: 0.9; }
@@ -191,7 +214,7 @@ header {
 .about { background: #12100e; }
 .about-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
 .sub-heading { color: var(--gold); font-family: -apple-system, sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; }
-.about-text h2 { font-size: 2.3rem; margin: 10px 0 20px; line-height: 1.2; }
+.about-text h2 { font-size: 2.2rem; margin: 10px 0 20px; line-height: 1.2; }
 .about-text p { color: var(--text-muted); font-family: -apple-system, sans-serif; margin-bottom: 25px; }
 
 .highlights { display: flex; flex-direction: column; gap: 12px; font-family: -apple-system, sans-serif; font-size: 0.95rem; }
@@ -199,58 +222,56 @@ header {
 
 .graphic-box {
     background: linear-gradient(135deg, #b45309, #78350f);
-    padding: 80px;
+    padding: 60px 40px;
     border-radius: 12px;
     text-align: center;
 }
-.graphic-box h3 { font-size: 4rem; }
-.graphic-box p { font-family: -apple-system, sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+.graphic-box h3 { font-size: 3.5rem; }
+.graphic-box p { font-family: -apple-system, sans-serif; letter-spacing: 1px; text-transform: uppercase; font-size: 0.9rem; }
 
-/* Lookbook Grid */
+/* Lookbook Section */
 .lookbook-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
-.gallery-placeholder {
-    height: 250px;
-    background: var(--card-bg);
-    border: 1px solid rgba(255,255,255,0.05);
+.gallery-item {
+    height: 280px;
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: -apple-system, sans-serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-muted);
+    overflow: hidden;
+    background: var(--card-bg);
 }
-.g-1 { background: linear-gradient(135deg, #292524, #1c1917); }
-.g-2 { background: linear-gradient(135deg, #44403c, #292524); }
-.g-3 { background: linear-gradient(135deg, #1c1917, #0c0a09); }
-.g-4 { background: linear-gradient(135deg, #3b0764, #1e1b4b); }
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
 
 /* Contact Section */
 .contact-card {
     background: var(--card-bg);
     border: 1px solid var(--gold);
     border-radius: 12px;
-    padding: 60px;
+    padding: 50px 30px;
     text-align: center;
-    max-width: 700px;
+    max-width: 650px;
     margin: 0 auto;
 }
-.contact-card h2 { font-size: 2.2rem; margin-bottom: 10px; }
-.contact-card p { color: var(--text-muted); font-family: -apple-system, sans-serif; margin-bottom: 30px; }
+.contact-card h2 { font-size: 2rem; margin-bottom: 10px; }
+.contact-card p { color: var(--text-muted); font-family: -apple-system, sans-serif; margin-bottom: 25px; }
 
-.contact-details { font-family: -apple-system, sans-serif; margin-bottom: 30px; display: flex; flex-direction: column; gap: 12px; }
+.contact-details { font-family: -apple-system, sans-serif; margin-bottom: 25px; display: flex; flex-direction: column; gap: 10px; }
 .contact-details i { color: var(--gold); margin-right: 10px; }
 
 .contact-whatsapp {
     display: inline-block;
     background: #25d366;
     color: #fff;
-    padding: 15px 30px;
+    padding: 14px 28px;
     border-radius: 6px;
     text-decoration: none;
     font-family: -apple-system, sans-serif;
@@ -259,17 +280,16 @@ header {
 
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 25px;
     font-family: -apple-system, sans-serif;
     color: var(--text-muted);
     font-size: 0.85rem;
     border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-/* Responsiveness */
+/* Responsive Mobile Layout */
 @media (max-width: 768px) {
     .nav-links { display: none; }
-    .hero-content h1 { font-size: 2.3rem; }
+    .hero-content h1 { font-size: 2.2rem; }
     .about-container { grid-template-columns: 1fr; }
-    .lookbook-gallery { grid-template-columns: 1fr; }
 }
